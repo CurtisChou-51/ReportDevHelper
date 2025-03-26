@@ -2,13 +2,13 @@
 
 namespace ReportDevHelper
 {
-    public class ExcelHelper : IDisposable
+    public class ExcelFillHtmlHelper : IDisposable
     {
         private readonly Workbook _workbook;
 
         private Cells _Cells => _workbook.Worksheets[0].Cells;
 
-        public ExcelHelper(string excelPath)
+        public ExcelFillHtmlHelper(string excelPath)
         {
             _workbook = new Workbook(excelPath);
         }

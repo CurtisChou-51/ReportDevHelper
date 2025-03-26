@@ -1,4 +1,6 @@
-﻿namespace ReportDevHelper
+﻿using System.Text;
+
+namespace ReportDevHelper
 {
     public partial class Form1 : Form
     {
@@ -10,25 +12,49 @@
             _htmlCreator.Init();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFillHtml_Click(object sender, EventArgs e)
         {
             string excelPath = txtExcelPath.Text;
-            using ExcelHelper excelHelper = new(excelPath);
+            using ExcelFillHtmlHelper helper = new(excelPath);
             int row = 1;
-            while (!excelHelper.IsEnd(row))
+            while (!helper.IsEnd(row))
             {
-                ColumnDto dto = excelHelper.Read(row);
+                ColumnDto dto = helper.Read(row);
                 string html = _htmlCreator.Create(dto);
-                excelHelper.Update(row, html);
+                helper.Update(row, html);
                 row++;
             }
 
             string newFileName = $"{Path.GetFileNameWithoutExtension(excelPath)}_html.xlsx";
             string savePath = Path.Combine(Path.GetDirectoryName(excelPath)!, newFileName);
-            excelHelper.Save(savePath);
+            helper.Save(savePath);
 
             MessageBox.Show("Done");
         }
 
+        private void btnCreateTd_Click(object sender, EventArgs e)
+        {
+            string excelPath = txtTmplExcelPath.Text;
+            using ExcelReadHtmlHelper helper = new(excelPath);
+
+            var dict = helper.Read();
+            string input = txtColsExpr.Text;
+            StringBuilder sb = new();
+            foreach (string item in input.Split(Environment.NewLine))
+            {
+                sb.Append($"<tr>{Environment.NewLine}");
+                foreach (string col in item.Split(new char[] { ' ', '\t' }))
+                {
+                    sb.Append("    <td>");
+                    if (dict.TryGetValue(col, out string? html))
+                        sb.Append(html);
+                    else
+                        sb.Append(col);
+                    sb.Append($"</td>{Environment.NewLine}");
+                }
+                sb.Append($"</tr>{Environment.NewLine}");
+            }
+            txtResultHtml.Text = sb.ToString();
+        }
     }
 }
