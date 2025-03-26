@@ -1,0 +1,13 @@
+﻿<input 
+    type="text" 
+    maxlength="{Len}" 
+    size="{Len}" 
+    {Style}
+
+    class="textNumber" 
+    name="0_{ColumnName}" 
+    v-model="cardData[0].{ColumnName}.FormValue" 
+    :data-value="cardData[0].{ColumnName}.PreviousData" 
+    :disabled="!unlockAllColumn &amp;&amp; !cardData[0].{ColumnName}.IsManual &amp;&amp; cardData[0].{ColumnName}.DataErrorListColumnId==-1" 
+    :haserror="cardData[0].{ColumnName}.DataErrorListColumnId" 
+/>

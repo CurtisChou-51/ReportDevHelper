@@ -1,0 +1,12 @@
+﻿<input 
+    type="checkbox" 
+    :true-value="1" 
+    :false-value="0" 
+    
+    class="textNumber" 
+    :name="cIndex + '_{ColumnName}'" 
+    v-model="card.{ColumnName}.FormValue" 
+    :data-value="card.{ColumnName}.PreviousData" 
+    :disabled="!unlockAllColumn &amp;&amp; !card.{ColumnName}.IsManual &amp;&amp; card.{ColumnName}.DataErrorListColumnId==-1" 
+    :haserror="card.{ColumnName}.DataErrorListColumnId" 
+/>
