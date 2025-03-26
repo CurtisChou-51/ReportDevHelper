@@ -1,11 +1,11 @@
-<input 
+﻿<input 
+    name="0_{ColumnName}" 
     type="radio" 
     value="{RadioValue}"
     id="{ColumnName}_{RadioValue}" 
     v-on:click="unLockFollowColumn($event)"
     
     class="textNumber"
-    name="0_{ColumnName}" 
     v-model="cardData[0].{ColumnName}.FormValue" 
     :data-value="cardData[0].{ColumnName}.PreviousData" 
     :disabled="!unlockAllColumn &amp;&amp; !cardData[0].{ColumnName}.IsManual &amp;&amp; cardData[0].{ColumnName}.DataErrorListColumnId==-1" 

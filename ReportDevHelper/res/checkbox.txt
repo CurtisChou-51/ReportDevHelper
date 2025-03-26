@@ -1,10 +1,10 @@
-<input 
+﻿<input 
+    name="0_{ColumnName}"
     type="checkbox"
     :true-value="1" 
     :false-value="0"  
     
     class="textNumber" 
-    name="0_{ColumnName}"
     v-model="cardData[0].{ColumnName}.FormValue" 
     :data-value="cardData[0].{ColumnName}.PreviousData" 
     :disabled="!unlockAllColumn &amp;&amp; !cardData[0].{ColumnName}.IsManual &amp;&amp; cardData[0].{ColumnName}.DataErrorListColumnId==-1" 
