@@ -13,7 +13,7 @@ namespace ReportDevHelper
             foreach (string name in assembly.GetManifestResourceNames().Where(x => x.StartsWith(resNamespace)))
             {
                 string templateName = Path.GetFileNameWithoutExtension(name[(resNamespace.Length + 1)..]);
-                _templates[templateName] = CleanHtml(ReadResource(assembly, name));
+                _templates[templateName] = ReadResource(assembly, name);
             }
         }
 
@@ -43,12 +43,12 @@ namespace ReportDevHelper
 
             string html(string radioValue)
             {
-                return template
+                return CleanHtml(template
                     .Replace("{ColumnName}", dto.ColumnName)
                     .Replace("{Len}", len)
                     .Replace("{Class}", displayAsNumber ? "textNumber" : "textCenter")
                     .Replace("{Style}", displayAsNumber ? "style=\"text-align: right;\" " : "")
-                    .Replace("{RadioValue}", radioValue);
+                    .Replace("{RadioValue}", radioValue));
             }
         }
 
