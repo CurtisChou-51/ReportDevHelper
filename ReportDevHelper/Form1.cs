@@ -45,7 +45,7 @@ namespace ReportDevHelper
                 sb.Append($"<tr>{Environment.NewLine}");
                 foreach (string col in item.Split(new char[] { ' ', '\t' }))
                 {
-                    sb.Append("    <td>");
+                    sb.Append("    <td style=\"text-align: center;\">");
                     if (dict.TryGetValue(col, out string? html))
                         sb.Append(html);
                     else
