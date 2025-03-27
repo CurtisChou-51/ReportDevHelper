@@ -37,9 +37,17 @@
             txtColsExpr = new TextBox();
             btnCreateTd = new Button();
             txtTmplExcelPath = new TextBox();
+            tabCardData = new TabPage();
+            txtSql = new TextBox();
+            label1 = new Label();
+            txtConnStr = new TextBox();
+            txtResultCardData = new TextBox();
+            btnCardData = new Button();
+            label2 = new Label();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
+            tabCardData.SuspendLayout();
             SuspendLayout();
             // 
             // btnFillHtml
@@ -64,6 +72,7 @@
             // 
             tabControl1.Controls.Add(tabFillHtml);
             tabControl1.Controls.Add(tabCreateTd);
+            tabControl1.Controls.Add(tabCardData);
             tabControl1.Location = new Point(27, 32);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -131,6 +140,75 @@
             txtTmplExcelPath.Size = new Size(768, 27);
             txtTmplExcelPath.TabIndex = 3;
             // 
+            // tabCardData
+            // 
+            tabCardData.Controls.Add(label2);
+            tabCardData.Controls.Add(txtSql);
+            tabCardData.Controls.Add(label1);
+            tabCardData.Controls.Add(txtConnStr);
+            tabCardData.Controls.Add(txtResultCardData);
+            tabCardData.Controls.Add(btnCardData);
+            tabCardData.Location = new Point(4, 28);
+            tabCardData.Name = "tabCardData";
+            tabCardData.Size = new Size(982, 456);
+            tabCardData.TabIndex = 2;
+            tabCardData.Text = "CardData";
+            tabCardData.UseVisualStyleBackColor = true;
+            // 
+            // txtSql
+            // 
+            txtSql.Location = new Point(123, 84);
+            txtSql.Multiline = true;
+            txtSql.Name = "txtSql";
+            txtSql.Size = new Size(722, 76);
+            txtSql.TabIndex = 10;
+            txtSql.WordWrap = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(38, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 19);
+            label1.TabIndex = 9;
+            label1.Text = "ConnStr";
+            // 
+            // txtConnStr
+            // 
+            txtConnStr.Location = new Point(123, 34);
+            txtConnStr.Name = "txtConnStr";
+            txtConnStr.Size = new Size(722, 27);
+            txtConnStr.TabIndex = 8;
+            // 
+            // txtResultCardData
+            // 
+            txtResultCardData.Location = new Point(38, 183);
+            txtResultCardData.Multiline = true;
+            txtResultCardData.Name = "txtResultCardData";
+            txtResultCardData.Size = new Size(807, 231);
+            txtResultCardData.TabIndex = 7;
+            txtResultCardData.WordWrap = false;
+            // 
+            // btnCardData
+            // 
+            btnCardData.Location = new Point(864, 131);
+            btnCardData.Margin = new Padding(4);
+            btnCardData.Name = "btnCardData";
+            btnCardData.Size = new Size(96, 29);
+            btnCardData.TabIndex = 5;
+            btnCardData.Text = "CardData";
+            btnCardData.UseVisualStyleBackColor = true;
+            btnCardData.Click += btnCardData_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(72, 87);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 19);
+            label2.TabIndex = 11;
+            label2.Text = "Sql";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -145,6 +223,8 @@
             tabFillHtml.PerformLayout();
             tabCreateTd.ResumeLayout(false);
             tabCreateTd.PerformLayout();
+            tabCardData.ResumeLayout(false);
+            tabCardData.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -159,5 +239,12 @@
         private Button btnCreateTd;
         private TextBox txtColsExpr;
         private TextBox txtResultHtml;
+        private TabPage tabCardData;
+        private Button btnCardData;
+        private TextBox txtResultCardData;
+        private TextBox txtConnStr;
+        private Label label1;
+        private TextBox txtSql;
+        private Label label2;
     }
 }

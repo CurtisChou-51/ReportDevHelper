@@ -56,5 +56,12 @@ namespace ReportDevHelper
             }
             txtResultHtml.Text = sb.ToString();
         }
+
+        private void btnCardData_Click(object sender, EventArgs e)
+        {
+            CardDataCreator cardDataCreator = new(txtConnStr.Text);
+            string sql = txtSql.Text;
+            txtResultCardData.Text = cardDataCreator.Create(sql);
+        }
     }
 }
