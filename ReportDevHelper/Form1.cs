@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Configuration;
+using System.Text;
 
 namespace ReportDevHelper
 {
@@ -10,6 +11,9 @@ namespace ReportDevHelper
         {
             InitializeComponent();
             _htmlCreator.Init();
+
+            txtConnStr.Text = ConfigurationManager.AppSettings["connStr"];
+            txtSql.Text = ConfigurationManager.AppSettings["cardDataDefaultSql"];
         }
 
         private void btnFillHtml_Click(object sender, EventArgs e)
