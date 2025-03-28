@@ -38,12 +38,12 @@
             btnCreateTd = new Button();
             txtTmplExcelPath = new TextBox();
             tabCardData = new TabPage();
+            label2 = new Label();
             txtSql = new TextBox();
             label1 = new Label();
             txtConnStr = new TextBox();
             txtResultCardData = new TextBox();
             btnCardData = new Button();
-            label2 = new Label();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
@@ -121,6 +121,7 @@
             txtColsExpr.Name = "txtColsExpr";
             txtColsExpr.Size = new Size(768, 129);
             txtColsExpr.TabIndex = 5;
+            txtColsExpr.WordWrap = false;
             // 
             // btnCreateTd
             // 
@@ -154,6 +155,15 @@
             tabCardData.TabIndex = 2;
             tabCardData.Text = "CardData";
             tabCardData.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(72, 87);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 19);
+            label2.TabIndex = 11;
+            label2.Text = "Sql";
             // 
             // txtSql
             // 
@@ -199,15 +209,6 @@
             btnCardData.Text = "CardData";
             btnCardData.UseVisualStyleBackColor = true;
             btnCardData.Click += btnCardData_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(72, 87);
-            label2.Name = "label2";
-            label2.Size = new Size(32, 19);
-            label2.TabIndex = 11;
-            label2.Text = "Sql";
             // 
             // Form1
             // 
