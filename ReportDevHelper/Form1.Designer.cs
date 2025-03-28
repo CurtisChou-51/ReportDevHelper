@@ -34,6 +34,7 @@
             tabFillHtml = new TabPage();
             label4 = new Label();
             tabCreateTd = new TabPage();
+            btnReplaceTags = new Button();
             label3 = new Label();
             txtResultHtml = new TextBox();
             txtColsExpr = new TextBox();
@@ -46,7 +47,6 @@
             txtConnStr = new TextBox();
             txtResultCardData = new TextBox();
             btnCardData = new Button();
-            btnReplaceTags = new Button();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
@@ -70,6 +70,7 @@
             txtExcelPath.Name = "txtExcelPath";
             txtExcelPath.Size = new Size(822, 27);
             txtExcelPath.TabIndex = 1;
+            txtExcelPath.TextChanged += txtExcelPath_TextChanged;
             // 
             // tabControl1
             // 
@@ -120,6 +121,17 @@
             tabCreateTd.Text = "CreateTd";
             tabCreateTd.UseVisualStyleBackColor = true;
             // 
+            // btnReplaceTags
+            // 
+            btnReplaceTags.Location = new Point(830, 261);
+            btnReplaceTags.Margin = new Padding(4);
+            btnReplaceTags.Name = "btnReplaceTags";
+            btnReplaceTags.Size = new Size(124, 29);
+            btnReplaceTags.TabIndex = 11;
+            btnReplaceTags.Text = "Replace Tags";
+            btnReplaceTags.UseVisualStyleBackColor = true;
+            btnReplaceTags.Click += btnReplaceTags_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -164,6 +176,7 @@
             txtTmplExcelPath.Name = "txtTmplExcelPath";
             txtTmplExcelPath.Size = new Size(926, 27);
             txtTmplExcelPath.TabIndex = 3;
+            txtTmplExcelPath.TextChanged += txtTmplExcelPath_TextChanged;
             // 
             // tabCardData
             // 
@@ -233,17 +246,6 @@
             btnCardData.Text = "CardData";
             btnCardData.UseVisualStyleBackColor = true;
             btnCardData.Click += btnCardData_Click;
-            // 
-            // btnReplaceTags
-            // 
-            btnReplaceTags.Location = new Point(830, 261);
-            btnReplaceTags.Margin = new Padding(4);
-            btnReplaceTags.Name = "btnReplaceTags";
-            btnReplaceTags.Size = new Size(124, 29);
-            btnReplaceTags.TabIndex = 11;
-            btnReplaceTags.Text = "Replace Tags";
-            btnReplaceTags.UseVisualStyleBackColor = true;
-            btnReplaceTags.Click += btnReplaceTags_Click;
             // 
             // Form1
             // 

@@ -95,5 +95,15 @@ namespace ReportDevHelper
                 return templateHtml.Split('\n').FirstOrDefault(x => x.Contains($"value=\"{radioValue}\"")) ?? match.Value;
             });
         }
+
+        private void txtExcelPath_TextChanged(object sender, EventArgs e)
+        {
+            txtExcelPath.Text = txtExcelPath.Text.Trim('\"');
+        }
+
+        private void txtTmplExcelPath_TextChanged(object sender, EventArgs e)
+        {
+            txtTmplExcelPath.Text = txtTmplExcelPath.Text.Trim('\"');
+        }
     }
 }
