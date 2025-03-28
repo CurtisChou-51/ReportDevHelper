@@ -32,7 +32,9 @@
             txtExcelPath = new TextBox();
             tabControl1 = new TabControl();
             tabFillHtml = new TabPage();
+            label4 = new Label();
             tabCreateTd = new TabPage();
+            label3 = new Label();
             txtResultHtml = new TextBox();
             txtColsExpr = new TextBox();
             btnCreateTd = new Button();
@@ -44,8 +46,7 @@
             txtConnStr = new TextBox();
             txtResultCardData = new TextBox();
             btnCardData = new Button();
-            label3 = new Label();
-            label4 = new Label();
+            btnReplaceTags = new Button();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
@@ -94,8 +95,18 @@
             tabFillHtml.Text = "FillHtml";
             tabFillHtml.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(36, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 19);
+            label4.TabIndex = 11;
+            label4.Text = "Excel Path";
+            // 
             // tabCreateTd
             // 
+            tabCreateTd.Controls.Add(btnReplaceTags);
             tabCreateTd.Controls.Add(label3);
             tabCreateTd.Controls.Add(txtResultHtml);
             tabCreateTd.Controls.Add(txtColsExpr);
@@ -108,6 +119,15 @@
             tabCreateTd.TabIndex = 1;
             tabCreateTd.Text = "CreateTd";
             tabCreateTd.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(30, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(157, 19);
+            label3.TabIndex = 10;
+            label3.Text = "Excel-With-Html Path";
             // 
             // txtResultHtml
             // 
@@ -129,7 +149,7 @@
             // 
             // btnCreateTd
             // 
-            btnCreateTd.Location = new Point(860, 257);
+            btnCreateTd.Location = new Point(710, 261);
             btnCreateTd.Margin = new Padding(4);
             btnCreateTd.Name = "btnCreateTd";
             btnCreateTd.Size = new Size(96, 29);
@@ -214,23 +234,16 @@
             btnCardData.UseVisualStyleBackColor = true;
             btnCardData.Click += btnCardData_Click;
             // 
-            // label3
+            // btnReplaceTags
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(30, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(157, 19);
-            label3.TabIndex = 10;
-            label3.Text = "Excel-With-Html Path";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(36, 22);
-            label4.Name = "label4";
-            label4.Size = new Size(78, 19);
-            label4.TabIndex = 11;
-            label4.Text = "Excel Path";
+            btnReplaceTags.Location = new Point(830, 261);
+            btnReplaceTags.Margin = new Padding(4);
+            btnReplaceTags.Name = "btnReplaceTags";
+            btnReplaceTags.Size = new Size(124, 29);
+            btnReplaceTags.TabIndex = 11;
+            btnReplaceTags.Text = "Replace Tags";
+            btnReplaceTags.UseVisualStyleBackColor = true;
+            btnReplaceTags.Click += btnReplaceTags_Click;
             // 
             // Form1
             // 
@@ -271,5 +284,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button btnReplaceTags;
     }
 }
