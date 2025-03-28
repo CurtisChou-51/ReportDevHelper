@@ -44,6 +44,8 @@
             txtConnStr = new TextBox();
             txtResultCardData = new TextBox();
             btnCardData = new Button();
+            label3 = new Label();
+            label4 = new Label();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
@@ -52,7 +54,7 @@
             // 
             // btnFillHtml
             // 
-            btnFillHtml.Location = new Point(708, 78);
+            btnFillHtml.Location = new Point(879, 57);
             btnFillHtml.Margin = new Padding(4);
             btnFillHtml.Name = "btnFillHtml";
             btnFillHtml.Size = new Size(96, 29);
@@ -63,9 +65,9 @@
             // 
             // txtExcelPath
             // 
-            txtExcelPath.Location = new Point(36, 25);
+            txtExcelPath.Location = new Point(36, 57);
             txtExcelPath.Name = "txtExcelPath";
-            txtExcelPath.Size = new Size(768, 27);
+            txtExcelPath.Size = new Size(822, 27);
             txtExcelPath.TabIndex = 1;
             // 
             // tabControl1
@@ -73,26 +75,28 @@
             tabControl1.Controls.Add(tabFillHtml);
             tabControl1.Controls.Add(tabCreateTd);
             tabControl1.Controls.Add(tabCardData);
-            tabControl1.Location = new Point(27, 32);
+            tabControl1.Location = new Point(27, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(990, 488);
+            tabControl1.Size = new Size(1004, 546);
             tabControl1.TabIndex = 2;
             // 
             // tabFillHtml
             // 
+            tabFillHtml.Controls.Add(label4);
             tabFillHtml.Controls.Add(txtExcelPath);
             tabFillHtml.Controls.Add(btnFillHtml);
             tabFillHtml.Location = new Point(4, 28);
             tabFillHtml.Name = "tabFillHtml";
             tabFillHtml.Padding = new Padding(3);
-            tabFillHtml.Size = new Size(982, 456);
+            tabFillHtml.Size = new Size(996, 514);
             tabFillHtml.TabIndex = 0;
             tabFillHtml.Text = "FillHtml";
             tabFillHtml.UseVisualStyleBackColor = true;
             // 
             // tabCreateTd
             // 
+            tabCreateTd.Controls.Add(label3);
             tabCreateTd.Controls.Add(txtResultHtml);
             tabCreateTd.Controls.Add(txtColsExpr);
             tabCreateTd.Controls.Add(btnCreateTd);
@@ -100,32 +104,32 @@
             tabCreateTd.Location = new Point(4, 28);
             tabCreateTd.Name = "tabCreateTd";
             tabCreateTd.Padding = new Padding(3);
-            tabCreateTd.Size = new Size(982, 456);
+            tabCreateTd.Size = new Size(996, 514);
             tabCreateTd.TabIndex = 1;
             tabCreateTd.Text = "CreateTd";
             tabCreateTd.UseVisualStyleBackColor = true;
             // 
             // txtResultHtml
             // 
-            txtResultHtml.Location = new Point(36, 224);
+            txtResultHtml.Location = new Point(30, 310);
             txtResultHtml.Multiline = true;
             txtResultHtml.Name = "txtResultHtml";
-            txtResultHtml.Size = new Size(768, 194);
+            txtResultHtml.Size = new Size(926, 184);
             txtResultHtml.TabIndex = 6;
             txtResultHtml.WordWrap = false;
             // 
             // txtColsExpr
             // 
-            txtColsExpr.Location = new Point(36, 75);
+            txtColsExpr.Location = new Point(30, 106);
             txtColsExpr.Multiline = true;
             txtColsExpr.Name = "txtColsExpr";
-            txtColsExpr.Size = new Size(768, 129);
+            txtColsExpr.Size = new Size(926, 129);
             txtColsExpr.TabIndex = 5;
             txtColsExpr.WordWrap = false;
             // 
             // btnCreateTd
             // 
-            btnCreateTd.Location = new Point(820, 175);
+            btnCreateTd.Location = new Point(860, 257);
             btnCreateTd.Margin = new Padding(4);
             btnCreateTd.Name = "btnCreateTd";
             btnCreateTd.Size = new Size(96, 29);
@@ -136,9 +140,9 @@
             // 
             // txtTmplExcelPath
             // 
-            txtTmplExcelPath.Location = new Point(36, 29);
+            txtTmplExcelPath.Location = new Point(30, 53);
             txtTmplExcelPath.Name = "txtTmplExcelPath";
-            txtTmplExcelPath.Size = new Size(768, 27);
+            txtTmplExcelPath.Size = new Size(926, 27);
             txtTmplExcelPath.TabIndex = 3;
             // 
             // tabCardData
@@ -151,7 +155,7 @@
             tabCardData.Controls.Add(btnCardData);
             tabCardData.Location = new Point(4, 28);
             tabCardData.Name = "tabCardData";
-            tabCardData.Size = new Size(982, 456);
+            tabCardData.Size = new Size(996, 514);
             tabCardData.TabIndex = 2;
             tabCardData.Text = "CardData";
             tabCardData.UseVisualStyleBackColor = true;
@@ -159,7 +163,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(72, 87);
+            label2.Location = new Point(38, 108);
             label2.Name = "label2";
             label2.Size = new Size(32, 19);
             label2.TabIndex = 11;
@@ -167,10 +171,10 @@
             // 
             // txtSql
             // 
-            txtSql.Location = new Point(123, 84);
+            txtSql.Location = new Point(38, 130);
             txtSql.Multiline = true;
             txtSql.Name = "txtSql";
-            txtSql.Size = new Size(722, 76);
+            txtSql.Size = new Size(922, 88);
             txtSql.TabIndex = 10;
             txtSql.WordWrap = false;
             // 
@@ -185,23 +189,23 @@
             // 
             // txtConnStr
             // 
-            txtConnStr.Location = new Point(123, 34);
+            txtConnStr.Location = new Point(38, 59);
             txtConnStr.Name = "txtConnStr";
-            txtConnStr.Size = new Size(722, 27);
+            txtConnStr.Size = new Size(922, 27);
             txtConnStr.TabIndex = 8;
             // 
             // txtResultCardData
             // 
-            txtResultCardData.Location = new Point(38, 183);
+            txtResultCardData.Location = new Point(38, 279);
             txtResultCardData.Multiline = true;
             txtResultCardData.Name = "txtResultCardData";
-            txtResultCardData.Size = new Size(807, 231);
+            txtResultCardData.Size = new Size(922, 213);
             txtResultCardData.TabIndex = 7;
             txtResultCardData.WordWrap = false;
             // 
             // btnCardData
             // 
-            btnCardData.Location = new Point(864, 131);
+            btnCardData.Location = new Point(864, 234);
             btnCardData.Margin = new Padding(4);
             btnCardData.Name = "btnCardData";
             btnCardData.Size = new Size(96, 29);
@@ -209,6 +213,24 @@
             btnCardData.Text = "CardData";
             btnCardData.UseVisualStyleBackColor = true;
             btnCardData.Click += btnCardData_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(30, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(157, 19);
+            label3.TabIndex = 10;
+            label3.Text = "Excel-With-Html Path";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(36, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 19);
+            label4.TabIndex = 11;
+            label4.Text = "Excel Path";
             // 
             // Form1
             // 
@@ -247,5 +269,7 @@
         private Label label1;
         private TextBox txtSql;
         private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }
