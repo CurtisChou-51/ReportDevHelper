@@ -144,6 +144,7 @@
             // txtResultHtml
             // 
             txtResultHtml.Location = new Point(30, 310);
+            txtResultHtml.MaxLength = int.MaxValue;
             txtResultHtml.Multiline = true;
             txtResultHtml.Name = "txtResultHtml";
             txtResultHtml.Size = new Size(926, 184);
@@ -153,6 +154,7 @@
             // txtColsExpr
             // 
             txtColsExpr.Location = new Point(30, 106);
+            txtColsExpr.MaxLength = int.MaxValue;
             txtColsExpr.Multiline = true;
             txtColsExpr.Name = "txtColsExpr";
             txtColsExpr.Size = new Size(926, 129);
