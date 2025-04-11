@@ -28,6 +28,19 @@ namespace ReportDevHelper
             }
             return dict;
         }
+
+        public IEnumerable<string> YieldReadColumns()
+        {
+            int row = 1;
+            while (_Cells.Rows.Count > row)
+            {
+                string columnName = _Cells[row, 2].StringValue;
+                row++;
+                if (!string.IsNullOrEmpty(columnName))
+                    yield return columnName;
+            }
+        }
+
         public void Dispose()
         {
             _workbook.Dispose();

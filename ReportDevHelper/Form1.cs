@@ -79,6 +79,25 @@ namespace ReportDevHelper
             txtResultHtml.Text = ReplaceTags(input, dict);
         }
 
+        private void btnGenProps_Click(object sender, EventArgs e)
+        {
+            string excelPath = txtTmplExcelPath.Text;
+            using ExcelReadHtmlHelper helper = new(excelPath);
+
+            HashSet<string> cols = helper.YieldReadColumns().ToHashSet();
+            txtResultHtml.Clear();
+
+            foreach (string input in txtColsExpr.Text.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries))
+            {
+                string regexPattern = $"^{Regex.Escape(input.Replace("＊", "*")).Replace("\\*", ".*")}$";
+                foreach (string col in cols)
+                {
+                    if (Regex.IsMatch(col, regexPattern))
+                        txtResultHtml.AppendText(col + Environment.NewLine);
+                }
+            }
+        }
+
         private static string ReplaceTags(string template, Dictionary<string, string> replacementDict)
         {
             string pattern = @"\[([0-9A-Za-z@]+)\]";
@@ -105,5 +124,6 @@ namespace ReportDevHelper
         {
             txtTmplExcelPath.Text = txtTmplExcelPath.Text.Trim('\"');
         }
+
     }
 }

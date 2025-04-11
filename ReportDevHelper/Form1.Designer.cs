@@ -47,6 +47,7 @@
             txtConnStr = new TextBox();
             txtResultCardData = new TextBox();
             btnCardData = new Button();
+            btnGenProps = new Button();
             tabControl1.SuspendLayout();
             tabFillHtml.SuspendLayout();
             tabCreateTd.SuspendLayout();
@@ -55,10 +56,9 @@
             // 
             // btnFillHtml
             // 
-            btnFillHtml.Location = new Point(879, 57);
-            btnFillHtml.Margin = new Padding(4);
+            btnFillHtml.Location = new Point(684, 45);
             btnFillHtml.Name = "btnFillHtml";
-            btnFillHtml.Size = new Size(96, 29);
+            btnFillHtml.Size = new Size(75, 23);
             btnFillHtml.TabIndex = 0;
             btnFillHtml.Text = "Fill Html";
             btnFillHtml.UseVisualStyleBackColor = true;
@@ -66,9 +66,10 @@
             // 
             // txtExcelPath
             // 
-            txtExcelPath.Location = new Point(36, 57);
+            txtExcelPath.Location = new Point(28, 45);
+            txtExcelPath.Margin = new Padding(2, 2, 2, 2);
             txtExcelPath.Name = "txtExcelPath";
-            txtExcelPath.Size = new Size(822, 27);
+            txtExcelPath.Size = new Size(640, 23);
             txtExcelPath.TabIndex = 1;
             txtExcelPath.TextChanged += txtExcelPath_TextChanged;
             // 
@@ -77,10 +78,11 @@
             tabControl1.Controls.Add(tabFillHtml);
             tabControl1.Controls.Add(tabCreateTd);
             tabControl1.Controls.Add(tabCardData);
-            tabControl1.Location = new Point(27, 12);
+            tabControl1.Location = new Point(21, 9);
+            tabControl1.Margin = new Padding(2, 2, 2, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1004, 546);
+            tabControl1.Size = new Size(781, 431);
             tabControl1.TabIndex = 2;
             // 
             // tabFillHtml
@@ -88,10 +90,11 @@
             tabFillHtml.Controls.Add(label4);
             tabFillHtml.Controls.Add(txtExcelPath);
             tabFillHtml.Controls.Add(btnFillHtml);
-            tabFillHtml.Location = new Point(4, 28);
+            tabFillHtml.Location = new Point(4, 24);
+            tabFillHtml.Margin = new Padding(2, 2, 2, 2);
             tabFillHtml.Name = "tabFillHtml";
-            tabFillHtml.Padding = new Padding(3);
-            tabFillHtml.Size = new Size(996, 514);
+            tabFillHtml.Padding = new Padding(2, 2, 2, 2);
+            tabFillHtml.Size = new Size(773, 403);
             tabFillHtml.TabIndex = 0;
             tabFillHtml.Text = "FillHtml";
             tabFillHtml.UseVisualStyleBackColor = true;
@@ -99,34 +102,36 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(36, 22);
+            label4.Location = new Point(28, 17);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(78, 19);
+            label4.Size = new Size(64, 15);
             label4.TabIndex = 11;
             label4.Text = "Excel Path";
             // 
             // tabCreateTd
             // 
+            tabCreateTd.Controls.Add(btnGenProps);
             tabCreateTd.Controls.Add(btnReplaceTags);
             tabCreateTd.Controls.Add(label3);
             tabCreateTd.Controls.Add(txtResultHtml);
             tabCreateTd.Controls.Add(txtColsExpr);
             tabCreateTd.Controls.Add(btnCreateTd);
             tabCreateTd.Controls.Add(txtTmplExcelPath);
-            tabCreateTd.Location = new Point(4, 28);
+            tabCreateTd.Location = new Point(4, 24);
+            tabCreateTd.Margin = new Padding(2, 2, 2, 2);
             tabCreateTd.Name = "tabCreateTd";
-            tabCreateTd.Padding = new Padding(3);
-            tabCreateTd.Size = new Size(996, 514);
+            tabCreateTd.Padding = new Padding(2, 2, 2, 2);
+            tabCreateTd.Size = new Size(773, 403);
             tabCreateTd.TabIndex = 1;
             tabCreateTd.Text = "CreateTd";
             tabCreateTd.UseVisualStyleBackColor = true;
             // 
             // btnReplaceTags
             // 
-            btnReplaceTags.Location = new Point(830, 261);
-            btnReplaceTags.Margin = new Padding(4);
+            btnReplaceTags.Location = new Point(646, 206);
             btnReplaceTags.Name = "btnReplaceTags";
-            btnReplaceTags.Size = new Size(124, 29);
+            btnReplaceTags.Size = new Size(96, 23);
             btnReplaceTags.TabIndex = 11;
             btnReplaceTags.Text = "Replace Tags";
             btnReplaceTags.UseVisualStyleBackColor = true;
@@ -135,38 +140,40 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(30, 20);
+            label3.Location = new Point(23, 16);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(157, 19);
+            label3.Size = new Size(127, 15);
             label3.TabIndex = 10;
             label3.Text = "Excel-With-Html Path";
             // 
             // txtResultHtml
             // 
-            txtResultHtml.Location = new Point(30, 310);
+            txtResultHtml.Location = new Point(23, 245);
+            txtResultHtml.Margin = new Padding(2, 2, 2, 2);
             txtResultHtml.MaxLength = int.MaxValue;
             txtResultHtml.Multiline = true;
             txtResultHtml.Name = "txtResultHtml";
-            txtResultHtml.Size = new Size(926, 184);
+            txtResultHtml.Size = new Size(721, 146);
             txtResultHtml.TabIndex = 6;
             txtResultHtml.WordWrap = false;
             // 
             // txtColsExpr
             // 
-            txtColsExpr.Location = new Point(30, 106);
+            txtColsExpr.Location = new Point(23, 84);
+            txtColsExpr.Margin = new Padding(2, 2, 2, 2);
             txtColsExpr.MaxLength = int.MaxValue;
             txtColsExpr.Multiline = true;
             txtColsExpr.Name = "txtColsExpr";
-            txtColsExpr.Size = new Size(926, 129);
+            txtColsExpr.Size = new Size(721, 103);
             txtColsExpr.TabIndex = 5;
             txtColsExpr.WordWrap = false;
             // 
             // btnCreateTd
             // 
-            btnCreateTd.Location = new Point(710, 261);
-            btnCreateTd.Margin = new Padding(4);
+            btnCreateTd.Location = new Point(552, 206);
             btnCreateTd.Name = "btnCreateTd";
-            btnCreateTd.Size = new Size(96, 29);
+            btnCreateTd.Size = new Size(75, 23);
             btnCreateTd.TabIndex = 4;
             btnCreateTd.Text = "Create Td";
             btnCreateTd.UseVisualStyleBackColor = true;
@@ -174,9 +181,10 @@
             // 
             // txtTmplExcelPath
             // 
-            txtTmplExcelPath.Location = new Point(30, 53);
+            txtTmplExcelPath.Location = new Point(23, 42);
+            txtTmplExcelPath.Margin = new Padding(2, 2, 2, 2);
             txtTmplExcelPath.Name = "txtTmplExcelPath";
-            txtTmplExcelPath.Size = new Size(926, 27);
+            txtTmplExcelPath.Size = new Size(721, 23);
             txtTmplExcelPath.TabIndex = 3;
             txtTmplExcelPath.TextChanged += txtTmplExcelPath_TextChanged;
             // 
@@ -188,9 +196,10 @@
             tabCardData.Controls.Add(txtConnStr);
             tabCardData.Controls.Add(txtResultCardData);
             tabCardData.Controls.Add(btnCardData);
-            tabCardData.Location = new Point(4, 28);
+            tabCardData.Location = new Point(4, 24);
+            tabCardData.Margin = new Padding(2, 2, 2, 2);
             tabCardData.Name = "tabCardData";
-            tabCardData.Size = new Size(996, 514);
+            tabCardData.Size = new Size(773, 403);
             tabCardData.TabIndex = 2;
             tabCardData.Text = "CardData";
             tabCardData.UseVisualStyleBackColor = true;
@@ -198,64 +207,77 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(38, 108);
+            label2.Location = new Point(30, 85);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(32, 19);
+            label2.Size = new Size(25, 15);
             label2.TabIndex = 11;
             label2.Text = "Sql";
             // 
             // txtSql
             // 
-            txtSql.Location = new Point(38, 130);
+            txtSql.Location = new Point(30, 103);
+            txtSql.Margin = new Padding(2, 2, 2, 2);
             txtSql.Multiline = true;
             txtSql.Name = "txtSql";
-            txtSql.Size = new Size(922, 88);
+            txtSql.Size = new Size(718, 70);
             txtSql.TabIndex = 10;
             txtSql.WordWrap = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 37);
+            label1.Location = new Point(30, 29);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(66, 19);
+            label1.Size = new Size(52, 15);
             label1.TabIndex = 9;
             label1.Text = "ConnStr";
             // 
             // txtConnStr
             // 
-            txtConnStr.Location = new Point(38, 59);
+            txtConnStr.Location = new Point(30, 47);
+            txtConnStr.Margin = new Padding(2, 2, 2, 2);
             txtConnStr.Name = "txtConnStr";
-            txtConnStr.Size = new Size(922, 27);
+            txtConnStr.Size = new Size(718, 23);
             txtConnStr.TabIndex = 8;
             // 
             // txtResultCardData
             // 
-            txtResultCardData.Location = new Point(38, 279);
+            txtResultCardData.Location = new Point(30, 220);
+            txtResultCardData.Margin = new Padding(2, 2, 2, 2);
             txtResultCardData.Multiline = true;
             txtResultCardData.Name = "txtResultCardData";
-            txtResultCardData.Size = new Size(922, 213);
+            txtResultCardData.Size = new Size(718, 169);
             txtResultCardData.TabIndex = 7;
             txtResultCardData.WordWrap = false;
             // 
             // btnCardData
             // 
-            btnCardData.Location = new Point(864, 234);
-            btnCardData.Margin = new Padding(4);
+            btnCardData.Location = new Point(672, 185);
             btnCardData.Name = "btnCardData";
-            btnCardData.Size = new Size(96, 29);
+            btnCardData.Size = new Size(75, 23);
             btnCardData.TabIndex = 5;
             btnCardData.Text = "CardData";
             btnCardData.UseVisualStyleBackColor = true;
             btnCardData.Click += btnCardData_Click;
             // 
+            // btnGenProps
+            // 
+            btnGenProps.Location = new Point(444, 206);
+            btnGenProps.Name = "btnGenProps";
+            btnGenProps.Size = new Size(82, 23);
+            btnGenProps.TabIndex = 12;
+            btnGenProps.Text = "Gen Props";
+            btnGenProps.UseVisualStyleBackColor = true;
+            btnGenProps.Click += btnGenProps_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 570);
+            ClientSize = new Size(811, 450);
             Controls.Add(tabControl1);
-            Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
             tabControl1.ResumeLayout(false);
@@ -289,5 +311,6 @@
         private Label label3;
         private Label label4;
         private Button btnReplaceTags;
+        private Button btnGenProps;
     }
 }
