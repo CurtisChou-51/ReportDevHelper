@@ -4,6 +4,7 @@
     - FillHtml
     - CreateTd
     - ReplaceTags
+    - GenProps
     - cardData.js
 
 ## FillHtml
@@ -59,6 +60,31 @@ FA00004	FA00005	FA00006
     <li><input name="0_FB30002" type="radio" value="3" id="FB30002_3" v-on:click="unLockFollowColumn($event)" class="textNumber" v-model="cardData[0].FB30002.FormValue" :data-value="cardData[0].FB30002.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].FB30002.IsManual &amp;&amp; cardData[0].FB30002.DataErrorListColumnId==-1" :haserror="cardData[0].FB30002.DataErrorListColumnId" /> option3</li>
 </ul>
 <label>foobar:</label><input name="0_FB51002" type="text" maxlength="5" size="5" style="text-align: right;" class="textNumber" v-model="cardData[0].FB51002.FormValue" :data-value="cardData[0].FB51002.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].FB51002.IsManual &amp;&amp; cardData[0].FB51002.DataErrorListColumnId==-1" :haserror="cardData[0].FB51002.DataErrorListColumnId" />
+```
+
+## Gen Props
+- generate matched props
+
+![](memos/GenProps.png)
+
+### input
+```
+FB25**1
+FB27**1
+```
+
+### output
+```
+FB25011
+FB25021
+FB25031
+FB25041
+FB25051
+FB27011
+FB27021
+FB27031
+FB27041
+FB27051
 ```
 
 ## CardData
