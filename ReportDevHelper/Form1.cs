@@ -89,13 +89,39 @@ namespace ReportDevHelper
 
             foreach (string input in txtColsExpr.Text.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries))
             {
-                string regexPattern = $"^{Regex.Escape(input.Replace("＊", "*")).Replace("\\*", ".*")}$";
-                foreach (string col in cols)
+                // find all expressions in input
+                string[] exprs = Regex.Matches(input, @"[A-Za-z]+[\d\*]*")
+                    .Cast<Match>()
+                    .Select(m => m.Value)
+                    .Distinct()
+                    .ToArray();
+
+                // find all matched columns for each expression
+                var propMatch = exprs
+                    .Select(x => new { prop = x, matches = GetMatchedProps(x, cols).ToArray() })
+                    .ToArray();
+
+                // replace each expression with its matched columns and combine
+                int maxCount = propMatch.Max(x => x.matches.Length);
+                for (int i = 0; i < maxCount; i++)
                 {
-                    if (Regex.IsMatch(col, regexPattern))
-                        txtResultHtml.AppendText(col + Environment.NewLine);
+                    string reuslt = input;
+                    foreach (var item in propMatch)
+                    {
+                        if (item.matches.Length > i)
+                            reuslt = reuslt.Replace(item.prop, item.matches[i]);
+                    }
+                    txtResultHtml.AppendText(reuslt + Environment.NewLine);
                 }
             }
+        }
+
+        private static IEnumerable<string> GetMatchedProps(string propExpr, HashSet<string> cols)
+        {
+            string regexPattern = $"^{Regex.Escape(propExpr.Replace("＊", "*")).Replace("\\*", ".*")}$";
+            foreach (string col in cols)
+                if (Regex.IsMatch(col, regexPattern))
+                    yield return col;
         }
 
         private static string ReplaceTags(string template, Dictionary<string, string> replacementDict)
