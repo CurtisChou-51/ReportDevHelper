@@ -20,7 +20,7 @@ namespace ReportDevHelper
             while (_Cells.Rows.Count > row)
             {
                 string columnName = _Cells[row, 2].StringValue;
-                string html = _Cells[row, 12].StringValue;
+                string html = _Cells[row, 15].StringValue;
                 row++;
                 if (string.IsNullOrEmpty(columnName) || string.IsNullOrEmpty(html))
                     continue;

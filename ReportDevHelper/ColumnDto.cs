@@ -7,5 +7,6 @@
         public string Len { get; set; } = string.Empty;
         public string RadioValues { get; set; } = string.Empty;
         public string DataType { get; set; } = string.Empty;
+        public string CodeClass { get; set; } = string.Empty;
     }
 }

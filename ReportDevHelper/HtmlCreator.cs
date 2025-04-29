@@ -33,20 +33,20 @@ namespace ReportDevHelper
 
 
             if (dto.Type != "radio")
-                return html("");
+                return html("", dto.CodeClass);
 
             IEnumerable<string> radioValues = (dto.RadioValues ?? "")
                 .Split(',')
                 .Where(x => !string.IsNullOrEmpty(x))
                 .Distinct();
-            return string.Join("\n", radioValues.Select(x => html(x)));
+            return string.Join("\n", radioValues.Select(x => html(x, dto.CodeClass)));
 
-            string html(string radioValue)
+            string html(string radioValue, string codeClass)
             {
                 return CleanHtml(template
                     .Replace("{ColumnName}", dto.ColumnName)
                     .Replace("{Len}", len)
-                    .Replace("{Class}", displayAsNumber ? "textNumber" : "textCenter")
+                    .Replace("{Class}", (displayAsNumber ? $"textNumber {codeClass}" : $"textCenter {codeClass}").Trim())
                     .Replace("{Style}", displayAsNumber ? "style=\"text-align: right;\" " : "")
                     .Replace("{RadioValue}", radioValue));
             }

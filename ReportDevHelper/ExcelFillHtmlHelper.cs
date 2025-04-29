@@ -21,13 +21,14 @@ namespace ReportDevHelper
                 DataType = _Cells[row, 3].StringValue,
                 Len = _Cells[row, 4].StringValue,
                 Type = _Cells[row, 10].StringValue,
-                RadioValues = _Cells[row, 11].StringValue
+                RadioValues = _Cells[row, 11].StringValue,
+                CodeClass = _Cells[row, 12].StringValue
             };
         }
 
         public void Update(int row, string html)
         {
-            _Cells[row, 12].Value = html;
+            _Cells[row, 15].Value = html;
         }
 
         public void Save(string path)
